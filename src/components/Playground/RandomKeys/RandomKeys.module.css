@@ -1,0 +1,13 @@
+.arrow {
+    font-size: 30px;
+}
+
+.iconSuccess {
+    background-color: rgb(69, 184, 69);
+}
+.iconUnsuccess {
+    background-color: rgb(228, 82, 82);
+}
+.iconDefault {
+    background-color: grey;
+}
