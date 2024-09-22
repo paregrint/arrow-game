@@ -1,3 +1,17 @@
+.container {
+    margin-bottom: 20px;
+}
 .arrow {
     font-size: 30px;
+}
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.178);
+    border-radius: 32px;
+    background-color: rgb(228, 222, 222);
+    width: 55px;
+    height: 55px;
+    font-size: 26px;
 }

@@ -7,7 +7,8 @@ import { KeyPressed } from './KeyPressed/KeyPressed'
 import { RandomKeys } from './RandomKeys/RandomKeys'
 import { Score } from './Score/Score'
 import { Modal } from './Modal/Modal'
-
+import { Description } from './Description/Description'
+import styles from './Playground.module.css'
 
 
 export const Playground = () => {
@@ -46,16 +47,25 @@ export const Playground = () => {
 		}
 	}, [state.totalSuccessful, state.totalUnsuccessful])
 	return (
-		<div>
-			{state.currentStep}
-			<Controls
-				isTimerActive={isTimerActive}
-				setisTimerActive={setisTimerActive}
-			/>
-			<RandomKeys isTimerActive={isTimerActive} />
-			<KeyPressed isTimerActive={isTimerActive} />
-			<Score/>
-			{isShowModal && <Modal setIsShowModal={setIsShowModal} isSuccessEndGame={isSuccessEndGame}/>}
+		<div className={styles.container}>
+			<div className={styles.column}>
+				<RandomKeys isTimerActive={isTimerActive} />
+				<KeyPressed isTimerActive={isTimerActive} />
+				<Score />
+			</div>
+			<div className={styles.column}>
+				<Description />
+				<Controls
+					isTimerActive={isTimerActive}
+					setisTimerActive={setisTimerActive}
+				/>
+			</div>
+			{isShowModal && (
+				<Modal
+					setIsShowModal={setIsShowModal}
+					isSuccessEndGame={isSuccessEndGame}
+				/>
+			)}
 		</div>
 	)
 }

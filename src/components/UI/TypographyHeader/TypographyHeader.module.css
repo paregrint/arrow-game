@@ -1,0 +1,16 @@
+.text {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: grey;
+
+    background: -webkit-linear-gradient(
+        right bottom,
+        red,
+        blue,
+        purple
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

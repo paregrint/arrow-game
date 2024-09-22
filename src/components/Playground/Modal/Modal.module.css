@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+}
+.container{
+    width: 300px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 16px 24px 2px rgb(54, 53, 53);
+}
+
+.modalSuccess {
+    border: 1px solid green;
+    background-color: rgb(177, 255, 167);
+}
+
+.modalUnsuccess {
+    border: 1px solid red;
+    background-color: rgb(247, 138, 138);
+}
+

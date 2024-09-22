@@ -4,6 +4,8 @@ import { useAppDispatch } from "../../../hooks"
 import { setEnteredValue } from "../../../store/slices/slices"
 import { useKeyPressedElement } from "./hooks"
 import styles from './RandomKeys.module.css'
+import { TypographyHeader } from "../../UI/TypographyHeader/TypographyHeader"
+
 
 interface IKeyPressedProps {
 	isTimerActive: boolean
@@ -31,8 +33,9 @@ export const KeyPressed = (props: IKeyPressedProps) => {
     })
   
     return (
-			<div>
-				Key pressed <span className={styles.arrow}>{keyPressedElement}</span>
+			<div className={styles.container}>
+				<TypographyHeader>Key pressed</TypographyHeader>
+				<span className={`${styles.arrow} ${styles.icon}`}>{keyPressedElement}</span>
 			</div>
 		)
 }

@@ -1,3 +1,6 @@
+import { TypographyText } from '../../UI/TypographyText/TypographyText'
+import styles from './ResultMessage.module.css'
+
 interface IResultMessageProps {
 	isSuccessEndGame: boolean
 }
@@ -5,7 +8,10 @@ interface IResultMessageProps {
 export const ResultMessage = (props: IResultMessageProps) => {
 	const { isSuccessEndGame } = props
 
-    return <div>
-        {isSuccessEndGame ? (<span>You won!</span>) : (<span>{`You have lost(((`}</span>)}
-    </div>
+	return (
+		<div className={styles.wrapper}>
+			{isSuccessEndGame ? (<TypographyText>You won!</TypographyText>) : (
+			<TypographyText>{`You have lost(((`}</TypographyText>)}
+		</div>
+	)
 }

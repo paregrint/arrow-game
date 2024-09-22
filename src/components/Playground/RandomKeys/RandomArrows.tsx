@@ -21,7 +21,7 @@ export const RandomArrows = () => {
 				{state.steps.map(element => (
 					<span
 						key={element.step}
-						className={`${styles.arrow} ${getStylesRandomKeys(element)}`}
+						className={`${styles.icon} ${getStylesRandomKeys(element)}`}
 					>
 						{MAP_ARROW_CODES[element.currentValue as keyof IMapArrowCodes]}
 					</span>
